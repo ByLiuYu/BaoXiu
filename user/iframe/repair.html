@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>宿舍报修表单</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap 5 JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <style>
+        .no-padding-margin {
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+    </style>
+</head>
+<body class="no-padding-margin">
+<div class="container-fluid no-padding-margin">
+    <h1 class="my-4">宿舍报修表单</h1>
+    <form>
+        <div class="mb-3">
+            <label for="name" class="form-label">姓名</label>
+            <input type="text" class="form-control" id="name" required>
+        </div>
+        <div class="mb-3">
+            <label for="student_id" class="form-label">学号</label>
+            <input type="text" class="form-control" id="student_id" required>
+        </div>
+        <div class="mb-3">
+            <label for="phone" class="form-label">联系电话</label>
+            <input type="tel" class="form-control" id="phone" required>
+        </div>
+        <div class="mb-3">
+            <label for="dormitory" class="form-label">宿舍号</label>
+            <input type="text" class="form-control" id="dormitory" required>
+        </div>
+        <div class="mb-3">
+            <label for="problem_type" class="form-label">报修问题类型</label>
+            <select class="form-select" id="problem_type" required>
+                <option selected disabled value="">请选择问题类型</option>
+                <option value="1">水管问题</option>
+                <option value="2">电路问题</option>
+                <option value="3">家具损坏</option>
+                <option value="4">其他</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">问题描述</label>
+            <textarea class="form-control" id="description" rows="3" required></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="formFile" class="form-label">上传图片 (如有必要)</label>
+            <input class="form-control" type="file" id="formFile">
+        </div>
+        <button type="submit" class="btn btn-primary">提交报修</button>
+    </form>
+</div>
+
+</body>
+</html>
